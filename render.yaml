@@ -2,7 +2,7 @@ services:
   - type: web
     name: rssfree
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python main.py
-    runtime: python
-    pythonVersion: 3.11
+    runtime: python-3.11.8
+    buildCommand: "pip install --upgrade pip && pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    plan: free
