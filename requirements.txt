@@ -6,10 +6,10 @@ httpx==0.25.2
 jmespath==1.0.1
 feedgen==0.9.0
 python-dateutil==2.8.2
-lxml==4.9.2
+lxml==4.9.3
 selenium==4.15.2
 webdriver-manager==4.0.1
 flask-cors==4.0.0
-Pillow==11.0.0
+Pillow==10.1.0
 urllib3==2.1.0
-gunicorn==20.1.0
+
