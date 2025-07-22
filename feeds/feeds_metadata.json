@@ -1,0 +1,17 @@
+{
+  "5203465433": {
+    "id": "5203465433",
+    "url": "https://www.instagram.com/meta/",
+    "platform": "Instagram",
+    "title": "خلاصة meta على Instagram",
+    "description": "آخر المنشورات من meta",
+    "xml_file": "5203465433.xml",
+    "xml_path": "/home/sandkshnbh/سطح المكتب/PY/RSSPY/feeds/5203465433.xml",
+    "created_at": "2025-07-22T17:09:05.318615",
+    "last_updated": "2025-07-22T17:09:05.318622",
+    "update_interval": 60,
+    "post_count": 12,
+    "rss_url": "/feeds/5203465433.xml",
+    "status": "active"
+  }
+}

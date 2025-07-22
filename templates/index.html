@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أداة RSS للتواصل الاجتماعي - إنشاء خلاصات RSS مجانية</title>
+    <meta name="description" content="أداة مجانية لإنشاء خلاصات RSS من حسابات وسائل التواصل الاجتماعي مثل فيسبوك وإنستغرام وتويتر">
+    <meta name="keywords" content="RSS, خلاصات, فيسبوك, إنستغرام, تويتر, وسائل التواصل الاجتماعي">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <i class="fas fa-rss"></i>
+                    <span>أداة RSS الاجتماعية</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link active">الرئيسية</a>
+                    <a href="#features" class="nav-link">الميزات</a>
+                    <a href="#how-it-works" class="nav-link">كيف تعمل</a>
+                    <a href="#feeds" class="nav-link">الخلاصات</a>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    إنشاء خلاصات RSS مجانية
+                    <span class="gradient-text">من وسائل التواصل الاجتماعي</span>
+                </h1>
+                <p class="hero-description">
+                    حول حساباتك على فيسبوك وإنستغرام وتويتر إلى خلاصات RSS مجانية بنقرة واحدة.
+                    تابع المحتوى المفضل لديك في مكان واحد دون الحاجة لزيارة كل منصة على حدة.
+                </p>
+                <div class="hero-form">
+                    <form id="rss-form" class="url-form">
+                        <div class="form-group">
+                            <input type="url" id="social-url" placeholder="أدخل رابط الحساب أو الصفحة..." required>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-magic"></i>
+                                إنشاء خلاصة RSS
+                            </button>
+                        </div>
+                        <div class="supported-platforms">
+                            <span>المنصات المدعومة:</span>
+                            <div class="platform-icons">
+                                <i class="fab fa-facebook" title="فيسبوك"></i>
+                                <i class="fab fa-instagram" title="إنستغرام"></i>
+                                <i class="fab fa-twitter" title="تويتر"></i>
+                                <i class="fab fa-youtube" title="يوتيوب"></i>
+                                <i class="fab fa-linkedin" title="لينكد إن"></i>
+                                <i class="fas fa-globe" title="مواقع الويب"></i>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>لماذا تختار أداتنا؟</h2>
+                <p>ميزات متقدمة ومجانية بالكامل</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>مجاني بالكامل</h3>
+                    <p>جميع الميزات متاحة مجاناً دون أي قيود أو رسوم خفية</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>سريع وفوري</h3>
+                    <p>إنشاء خلاصات RSS في ثوانٍ معدودة مع تحديث تلقائي للمحتوى</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>آمن وموثوق</h3>
+                    <p>لا نحفظ بياناتك الشخصية ونحترم خصوصيتك بالكامل</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>متوافق مع الجوال</h3>
+                    <p>يعمل بسلاسة على جميع الأجهزة والمتصفحات</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>تحديث تلقائي</h3>
+                    <p>خلاصاتك تتحدث تلقائياً مع كل محتوى جديد</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>قابل للتخصيص</h3>
+                    <p>تحكم في عدد المنشورات وفترة التحديث حسب احتياجاتك</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>كيف تعمل الأداة؟</h2>
+                <p>ثلاث خطوات بسيطة للحصول على خلاصة RSS</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>أدخل الرابط</h3>
+                        <p>انسخ رابط الحساب أو الصفحة من أي منصة تواصل اجتماعي</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>اضغط إنشاء</h3>
+                        <p>اضغط على زر "إنشاء خلاصة RSS" ودع الأداة تقوم بالباقي</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>احصل على الخلاصة</h3>
+                        <p>انسخ رابط RSS واستخدمه في قارئ الأخبار المفضل لديك</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="results" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <h2>خلاصة RSS جاهزة!</h2>
+                <p>تم إنشاء خلاصتك بنجاح</p>
+            </div>
+            <div class="result-card">
+                <div class="result-info">
+                    <h3 id="feed-title">عنوان الخلاصة</h3>
+                    <p id="feed-description">وصف الخلاصة</p>
+                    <div class="feed-stats">
+                        <span class="stat">
+                            <i class="fas fa-file-alt"></i>
+                            <span id="post-count">0</span> منشور
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-clock"></i>
+                            آخر تحديث: <span id="last-updated">الآن</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="result-actions">
+                    <div class="rss-url-container">
+                        <input type="text" id="rss-url" readonly>
+                        <button class="btn-copy" onclick="copyRSSUrl()">
+                            <i class="fas fa-copy"></i>
+                            نسخ
+                        </button>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn-secondary" onclick="downloadRSS()">
+                            <i class="fas fa-download"></i>
+                            تحميل XML
+                        </button>
+                        <button class="btn-secondary" onclick="previewFeed()">
+                            <i class="fas fa-eye"></i>
+                            معاينة
+                        </button>
+                        <button class="btn-primary" onclick="createAnother()">
+                            <i class="fas fa-plus"></i>
+                            إنشاء خلاصة أخرى
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feeds List Section -->
+    <section id="feeds" class="feeds-list">
+        <div class="container">
+            <div class="section-header">
+                <h2>الخلاصات المُنشأة</h2>
+                <p>جميع خلاصات RSS التي تم إنشاؤها</p>
+            </div>
+            <div id="feeds-container" class="feeds-grid">
+                <!-- سيتم ملء هذا القسم بـ JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Modal -->
+    <div id="loading-modal" class="modal">
+        <div class="modal-content">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+            <h3>جاري إنشاء خلاصة RSS...</h3>
+            <p>يرجى الانتظار بينما نقوم باستخراج المحتوى</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>أداة RSS الاجتماعية</h3>
+                    <p>أداة مجانية لإنشاء خلاصات RSS من وسائل التواصل الاجتماعي</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط مفيدة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#features">الميزات</a></li>
+                        <li><a href="#how-it-works">كيف تعمل</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>المنصات المدعومة</h4>
+                    <ul>
+                        <li>فيسبوك</li>
+                        <li>إنستغرام</li>
+                        <li>تويتر</li>
+                        <li>يوتيوب</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 أداة RSS الاجتماعية. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
