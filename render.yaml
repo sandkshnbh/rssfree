@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: rssfree
+    name: rss-social-tool
     env: python
     runtime: python-3.11.8
     buildCommand: "pip install --upgrade pip && pip install -r requirements.txt"
